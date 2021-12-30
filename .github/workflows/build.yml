@@ -13,4 +13,4 @@ jobs:
       -name: dockerhub login
        tun: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
       -name: push to dockerhub
-       run: docker image push Endless-Android/eddie_flask_redis:latest
+       run: docker image push eddiejhx/eddie_flask_redis:latest
