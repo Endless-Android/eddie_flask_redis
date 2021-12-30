@@ -4,4 +4,4 @@ COPY app.py /opt/eddie/app.py
 
 WORKDIR /opt/eddie
 
-CMD["python","app.py"]
+CMD ["python","app.py"]
