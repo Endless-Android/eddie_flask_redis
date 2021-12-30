@@ -1,16 +1,16 @@
 name: Docker image buildx and push
-on:[push]
+on: [push]
 jobs:
   Docker-Build-Push:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-       uses: actions/checkout@v2
-      -name: docker image build
-       run: docker build -t Endless-Android/eddie_flask_redis:latest .
-      -name: list docjer image
-       run: docker image ls
-      -name: dockerhub login
-       tun: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
-      -name: push to dockerhub
-       run: docker image push eddiejhx/eddie_flask_redis:latest
+        uses: actions/checkout@v2
+      - name: docker image build
+        run: docker build -t Endless-Android/eddie_flask_redis:latest .
+      - name: list docjer image
+        run: docker image ls
+      - name: dockerhub login
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: push to dockerhub
+        run: docker image push eddiejhx/eddie_flask_redis:latest
